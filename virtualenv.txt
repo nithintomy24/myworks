@@ -3,3 +3,6 @@ pip install virtualenv
 virtualenv ENV
 
 source ENV/bin/avtivate
+
+(ENV)$ deactivate
+$ rm -r /path/to/ENV
