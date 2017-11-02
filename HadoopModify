@@ -1,0 +1,4 @@
+Download Source code
+git clone https://github.com/apache/hadoop.git
+
+Install Maven
