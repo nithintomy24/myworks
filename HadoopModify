@@ -27,6 +27,15 @@ Install CMake
 python
   already installed
   
+  mvn install -X -Dskiptests
+  
+   mvn clean
+   mvn compile -Pnative
+   mvn package
+   mvn compile findbugs:findbugs
+   mvn install
+   mvn package -Pdist,docs,src,native -Dtar
+  
 
 
 
