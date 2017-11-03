@@ -27,14 +27,27 @@ Install CMake
 python
   already installed
   
-  mvn install -X -Dskiptests
+  apt-get -y install maven build-essential autoconf automake libtool cmake zlib1g-dev pkg-config libssl-dev libfuse-dev
   
-   mvn clean
-   mvn compile -Pnative
-   mvn package
-   mvn compile findbugs:findbugs
-   mvn install
-   mvn package -Pdist,docs,src,native -Dtar
+  $ mvn install -DskipTests
+
+  $ mvn eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true
+  Now your project is Eclipse ready.
+  1.File -> Import...
+
+  2.Choose "Existing Projects into Workspace".
+
+  3.Select hadoop src folder as root 4. Click "Finish"
+  
+  Note: 
+    if error message "cannot execute zip" search for the jar file in <http://search.maven.org> and place it in /.m2/<path>
+
+     mvn clean
+     mvn compile -Pnative
+     mvn package
+     mvn compile findbugs:findbugs
+     mvn install
+     mvn package -Pdist,docs,src,native -Dtar
   
 
 
