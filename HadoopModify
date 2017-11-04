@@ -33,6 +33,9 @@ python
 
   $ mvn eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true
   Now your project is Eclipse ready.
+  
+  http://blog.cloudera.com/blog/2013/05/how-to-configure-eclipse-for-hadoop-contributions/
+  
   1.File -> Import...
 
   2.Choose "Existing Projects into Workspace".
