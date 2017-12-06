@@ -52,7 +52,33 @@ python
      mvn install
      mvn package -Pdist,docs,src,native -Dtar
   
+[https://pravinchavan.wordpress.com/2013/04/14/building-apache-hadoop-from-source/]
+  To Get Build
+  mvn package -Pdist -Pdoc -Psrc -Dtar -DskipTests
 
+It will build package and resulting distribuition is stored in-
+
+hadoop-dist/target/ directory
+
+Now can install this distribution and run job over it.
+
+Some Alternatives ways of Building distributions:
+
+Create binary distribution without native code and without documentation:
+
+# mvn package -Pdist -DskipTests -Dtar
+Create binary distribution with native code and with documentation:
+
+# mvn package -Pdist,native,docs -DskipTests -Dtar
+Create source distribution:
+
+# mvn package -Psrc -DskipTests
+Create source and binary distributions with native code and documentation:
+
+# mvn package -Pdist,native,docs,src -DskipTests -Dtar
+Create a local staging version of the website (in /tmp/hadoop-site)
+
+# mvn clean site; mvn site:stage -DstagingDirectory=/tmp/hadoop-site
 
 
 
